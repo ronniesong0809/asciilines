@@ -20,5 +20,24 @@ y = int(list[0][1])
 # print(x,y)
 
 # fill with .
-canvas = [['.'*y]*x]
+canvas = [['.']*y]*x
+# print(canvas)
+
+# render canvas
+for line in list[1:]:
+  character = line[0] # a character to render with
+  row = int(line[1]) # a row position to start at
+  column = int(line[2]) # a column position to start at
+  direction = line[3] # a direction of horizontal or vertical
+  length = int(line[4]) # a length for the rendered line
+
+  for i in range(length):
+    # horizontal
+    if direction == 'h':
+      print(row, column)
+      canvas[row][column+i] = character
+    # vertical
+    if direction == 'v':
+      print(row, column)
+      canvas[row+i][column] = character
 print(canvas)
