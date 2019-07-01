@@ -1,3 +1,4 @@
+# Ronnie Song
 import sys
 
 if len(sys.argv) != 2:
@@ -23,7 +24,7 @@ if len(list[0])!=2:
   print("Invalid input, the " + str(list[0]) + " sizing command need to containing only 2 characters.")
   exit()
 
-# https://stackoverflow.com/questions/8075877/converting-string-to-int-using-try-except-in-python
+# reference from: https://stackoverflow.com/questions/8075877/converting-string-to-int-using-try-except-in-python
 try:
   x = int(list[0][0])
   y = int(list[0][1])
@@ -48,7 +49,7 @@ for line in list[1:]:
     print("Invalid input, the " + str(line) + " rendering command need to containing only 5 characters.")
     exit()
 
-  # https://stackoverflow.com/questions/8075877/converting-string-to-int-using-try-except-in-python
+  # reference from: https://stackoverflow.com/questions/8075877/converting-string-to-int-using-try-except-in-python
   try:
     character = line[0] # a character to render with
     row = int(line[1]) # a row position to start at
